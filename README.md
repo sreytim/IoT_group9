@@ -61,28 +61,6 @@ Implement temperature-based alert and relay control:
   - User sending `/on` command (alerts stop)
   - Temperature cooling down below 30°C (relay auto-turns OFF with notification)
 
-
-### System Block Diagram
-
-```
-┌──────────────────────────────────────────────────────────┐
-│                        ESP32 Main Loop                    │
-│  ┌────────────────────────────────────────────────────┐  │
-│  │ 1. Read DHT22 (every 5s)                           │  │
-│  │ 2. Check Temperature against 30°C threshold        │  │
-│  │ 3. Poll Telegram for commands (/on, /off, /status)│  │
-│  │ 4. Send alerts if T ≥ 30°C                        │  │
-│  │ 5. Auto-turn relay OFF when T < 30°C              │  │
-│  └────────────────────────────────────────────────────┘  │
-│                           │                                │
-├───────────────┬──────────┴──────────┬────────────────────┤
-│               │                     │                    │
-▼               ▼                     ▼                    ▼
-DHT22        Relay Module      Telegram Bot API        Wi-Fi
-Sensor       (GPIO 5)          (HTTP Requests)       Network
-(GPIO 4)
-```
-
 ### Usage Instructions
 
 1. **Setup**:
@@ -91,7 +69,7 @@ Sensor       (GPIO 5)          (HTTP Requests)       Network
    # Edit config.py with your credentials
    # Flash main.py to ESP32 via Thonny
    ```
-
+   
 2. **Operation**:
    - ESP32 boots and connects to Wi-Fi
    - Reads temperature every 5 seconds
@@ -102,52 +80,3 @@ Sensor       (GPIO 5)          (HTTP Requests)       Network
    - `/status` - Display current T/H and relay state
    - `/on` - Manually turn relay ON (stops alerts)
    - `/off` - Manually turn relay OFF
-
----
-
-## Safety & Performance Considerations
-
-- **Relay Load**: Ensure relay module is rated for your switching load (check datasheet)
-- **Power Isolation**: Relay controls separate circuit; do not drive high-power loads directly
-- **Sampling Interval**: 5-second DHT read interval prevents sensor overheating
-- **Telegram Rate Limits**: Bot respects Telegram API rate limits (~30 msgs/sec per chat)
-- **Wi-Fi Stability**: Auto-reconnect handles temporary network drops
-
----
-
-## File Structure
-
-```
-project/
-├── main.py              # Main application loop
-├── config.py            # Configuration (tokens, Wi-Fi, thresholds)
-├── telegram.py          # Telegram message functions
-├── bot.py               # Bot command handlers
-├── network.py           # Wi-Fi connection management
-├── README.md            # This file
-└── wiring.jpg           # Photo of physical wiring
-```
-
----
-
-## Testing Checklist
-
-- [ ] DHT22 reads every 5 seconds (Task 1)
-- [ ] Test message sends to Telegram (Task 2)
-- [ ] `/status` displays T/H/relay state (Task 3)
-- [ ] `/on` and `/off` control relay (Task 3)
-- [ ] Alerts send every 5s when T ≥ 30°C (Task 4)
-- [ ] Alerts stop after `/on` command (Task 4)
-- [ ] Relay auto-turns OFF when T < 30°C (Task 4)
-- [ ] Wi-Fi auto-reconnects after drop (Task 5)
-- [ ] Telegram errors handled gracefully (Task 5)
-- [ ] DHT sensor errors don't crash system (Task 5)
-
----
-
-## References
-
-- [ESP32 MicroPython Documentation](https://docs.micropython.org/en/latest/esp32/quickref.html)
-- [DHT22 Sensor Guide](https://docs.micropython.org/en/latest/library/dht.html)
-- [Telegram Bot API](https://core.telegram.org/bots/api)
-- [urequests Library](https://docs.micropython.org/en/latest/library/urequests.html)
