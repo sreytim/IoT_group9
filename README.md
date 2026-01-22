@@ -33,8 +33,8 @@ Read DHT22 temperature and humidity every 5 seconds and print values with 2 deci
 Implement `send_message()` function and post a test message to the group chat.
 
 ### Evidence
-![Task 2 Wiring Setup](images/task%201)
-![Task 2(terminal) Wiring Setup](images/task%201)
+![Task 2 Wiring Setup](images/task%202)
+![Task 2(terminal) Wiring Setup](images/task%202%28terminal%29)
 
 ## Task 3: Bot Commands (/status, /on, /off) 
 
@@ -45,7 +45,7 @@ Implement three Telegram bot commands:
 - `/off`: Turn relay OFF
 
 ### Evidence
-![Task 3 Wiring Setup](images/task%201)
+![Task 3 Wiring Setup](images/task%203)
 
 ## Task 4: Intelligent Alert & Auto-Control Logic (20 pts)
 
