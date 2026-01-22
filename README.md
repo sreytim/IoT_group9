@@ -57,6 +57,7 @@ Implement temperature-based alert and relay control:
 - When T drops below 30°C, automatically turn relay OFF and send a one-time "auto-OFF" notification
 
 ### Evidence
+YouTube link: https://youtu.be/FpNv4iB8RDQ?si=KWKbDiEc0fcDbF5W
   - Temperature rising above 30°C and alert messages sending every 5 seconds
   - User sending `/on` command (alerts stop)
   - Temperature cooling down below 30°C (relay auto-turns OFF with notification)
