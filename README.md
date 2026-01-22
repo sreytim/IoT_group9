@@ -3,8 +3,6 @@
 ## Overview
 This IoT monitoring node uses an ESP32 with a DHT22 temperature/humidity sensor and relay module to send Telegram alerts when temperature exceeds a threshold and allows remote control via Telegram Bot API.
 
----
-
 ## Hardware Setup
 
 ### Wiring Diagram
