@@ -25,7 +25,7 @@ This IoT monitoring node uses an ESP32 with a DHT22 temperature/humidity sensor 
 Read DHT22 temperature and humidity every 5 seconds and print values with 2 decimal places.
 
 ### Evidence
-![Task 1](images/task 1)
+![Task 1 Wiring Setup](images/task%201)
 
 ## Task 2: Telegram Send
 
