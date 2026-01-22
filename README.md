@@ -3,23 +3,6 @@
 ## Overview
 This IoT monitoring node uses an ESP32 with a DHT22 temperature/humidity sensor and relay module to send Telegram alerts when temperature exceeds a threshold and allows remote control via Telegram Bot API.
 
-## Hardware Setup
-
-### Wiring Diagram
-```
-ESP32 Pin Layout:
-┌─────────────────────────────────────┐
-│  ESP32 Dev Board                    │
-├─────────────────────────────────────┤
-│ DHT22:      Data → GPIO 4           │
-│ Relay:      Signal → GPIO 5         │
-│ Relay:      GND → GND               │
-│ Relay:      VCC → 3.3V              │
-│ DHT22:      VCC → 3.3V              │
-│ DHT22:      GND → GND               │
-└─────────────────────────────────────┘
-```
-
 ### Components
 - **ESP32 Dev Board** (MicroPython firmware)
 - **DHT22 Temperature/Humidity Sensor**
@@ -28,25 +11,6 @@ ESP32 Pin Layout:
 - **USB cable** for programming
 - **Wi-Fi network** with internet access
 
----
-
-## Configuration
-
-### Initial Setup
-
-1. **Flash MicroPython firmware** to ESP32 using Thonny or esptool
-2. **Install dependencies**: No external libraries required (using built-in `urequests` and `dht`)
-3. **Create `config.py`** in the root directory with your credentials:
-
-```python
-# config.py
-WIFI_SSID = "your_wifi_ssid"
-WIFI_PASSWORD = "your_wifi_password"
-TELEGRAM_BOT_TOKEN = "your_bot_token_here"
-TELEGRAM_CHAT_ID = "your_chat_id_here"
-TEMPERATURE_THRESHOLD = 30  # Celsius
-SAMPLING_INTERVAL = 5  # seconds
-```
 
 ### Getting Telegram Credentials
 
@@ -54,7 +18,6 @@ SAMPLING_INTERVAL = 5  # seconds
 2. **Get Bot Token**: BotFather will provide your `TELEGRAM_BOT_TOKEN`
 3. **Get Chat ID**: Send a message to your bot, then visit `https://api.telegram.org/bot<TOKEN>/getUpdates` and copy your `chat_id`
 
----
 
 ## Task 1: Sensor Read & Print (10 pts)
 
