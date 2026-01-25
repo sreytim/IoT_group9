@@ -18,6 +18,9 @@ This IoT monitoring node uses an ESP32 with a DHT22 temperature/humidity sensor 
 2. **Get Bot Token**: BotFather will provide your `TELEGRAM_BOT_TOKEN`
 3. **Get Chat ID**: Send a message to your bot, then visit `https://api.telegram.org/bot<TOKEN>/getUpdates` and copy your `chat_id`
 
+### Flowchart
+![Flowchart](images/flowchart.png)
+
 
 ## Task 1: Sensor Read & Print
 
