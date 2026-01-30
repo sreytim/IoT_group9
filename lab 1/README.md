@@ -17,7 +17,7 @@ This IoT monitoring node uses an ESP32 with a DHT22 temperature/humidity sensor 
 3. **Get Chat ID**: Send a message to your bot, then visit `https://api.telegram.org/bot<TOKEN>/getUpdates` and copy your `chat_id`
 
 ## 📊 Flowchart
-![Flowchart](./images/flowchart.png)
+![Flowchart](./images/flowchart)
 
 ---
 
@@ -32,7 +32,7 @@ See `task_1.py` in the repository.
 ### Evidence
 | Wiring Setup |
 |:---:|
-| ![Task 1 Wiring Setup](./images/task 1.png) |
+| ![Task 1 Wiring Setup](./images/task_1) |
 
 ---
 
@@ -47,7 +47,7 @@ See `task_2.py` in the repository.
 ### Evidence
 | Wiring Setup | Terminal Output |
 |:---:|:---:|
-| ![Task 2 Wiring Setup](./images/task 2) | ![Task 2 Terminal Output](./images/task 2\(terminal\).png) |
+| ![Task 2 Wiring Setup](./images/task_2) | ![Task 2 Terminal Output](./images/task_2\(terminal\)) |
 
 ---
 
@@ -65,7 +65,7 @@ See `task_3.py` in the repository.
 ### Evidence
 | Wiring Setup |
 |:---:|
-| ![Task 3 Wiring Setup](./images/task 3.png) |
+| ![Task 3 Wiring Setup](./images/task_3) |
 
 ---
 
@@ -133,11 +133,11 @@ pip install -r requirements.txt
 ```
 Lab 1/
 ├── images/
-│   ├── flowchart.png
-│   ├── task_1.png
-│   ├── task_2.png
-│   ├── task_2(terminal).png
-│   └── task_3.png
+│   ├── flowchart
+│   ├── task_1
+│   ├── task_2
+│   ├── task_2(terminal)
+│   └── task_3
 ├── task_1.py
 ├── task_2.py
 ├── task_3.py
@@ -145,6 +145,17 @@ Lab 1/
 └── README.md
 ```
 
+---
+
+## 📖 Additional Resources
+- [ESP32 Documentation](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/)
+- [DHT22 Sensor Guide](https://learn.adafruit.com/dht/overview)
+- [Telegram Bot API](https://core.telegram.org/bots/api)
+
+---
 
 ## 👥 Authors
 Group 9 - IoT Lab Project
+
+## 📄 License
+This project is open source and available under the MIT License.
