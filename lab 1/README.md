@@ -145,17 +145,5 @@ Lab 1/
 └── README.md
 ```
 
----
-
-## 📖 Additional Resources
-- [ESP32 Documentation](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/)
-- [DHT22 Sensor Guide](https://learn.adafruit.com/dht/overview)
-- [Telegram Bot API](https://core.telegram.org/bots/api)
-
----
-
 ## 👥 Authors
 Group 9 - IoT Lab Project
-
-## 📄 License
-This project is open source and available under the MIT License.
