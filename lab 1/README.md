@@ -31,7 +31,7 @@ Read DHT22 temperature and humidity every 5 seconds and print values with 2 deci
 
 ### Evidence
 
-![Task 1 Wiring Setup](images/task_1.png)
+![Task 1 Wiring Setup](images/task 1.png)
 
 ## Task 2: Telegram Send
 
@@ -41,9 +41,9 @@ Implement `send_message()` function and post a test message to the group chat.
 
 ### Evidence
 
-![Task 2 Wiring Setup](images/task_2.png)
+![Task 2 Wiring Setup](images/task 2.png)
 
-![Task 2 Terminal Output](images/task_2_terminal.png)
+![Task 2 Terminal Output](images/task 2_terminal.png)
 
 ## Task 3: Bot Commands (/status, /on, /off)
 
@@ -57,7 +57,7 @@ Implement three Telegram bot commands:
 
 ### Evidence
 
-![Task 3 Wiring Setup](images/task_3.png)
+![Task 3 Wiring Setup](images/task 3.png)
 
 ## Task 4: Intelligent Alert & Auto-Control Logic
 
@@ -84,7 +84,7 @@ The demonstration shows:
 ### Setup
 
 ```bash
-git clone <https://github.com/sreytim/IoT_group9.git>
+git clone https://github.com/sreytim/IoT_group9.git
 
 ```
 
