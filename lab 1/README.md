@@ -47,7 +47,7 @@ See `task_2.py` in the repository.
 ### Evidence
 | Wiring Setup | Terminal Output |
 |:---:|:---:|
-| ![Task 2 Wiring Setup](./images/task 2.png) | ![Task 2 Terminal Output](./images/task 2\(terminal\).png) |
+| ![Task 2 Wiring Setup](./images/task 2) | ![Task 2 Terminal Output](./images/task 2\(terminal\).png) |
 
 ---
 
