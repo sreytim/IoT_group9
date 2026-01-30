@@ -32,7 +32,7 @@ See `task_1.py` in the repository.
 ### Evidence
 | Wiring Setup |
 |:---:|
-| ![Task 1 Wiring Setup](./images/task_1.png) |
+| ![Task 1 Wiring Setup](./images/task 1.png) |
 
 ---
 
@@ -47,7 +47,7 @@ See `task_2.py` in the repository.
 ### Evidence
 | Wiring Setup | Terminal Output |
 |:---:|:---:|
-| ![Task 2 Wiring Setup](./images/task_2.png) | ![Task 2 Terminal Output](./images/task_2\(terminal\).png) |
+| ![Task 2 Wiring Setup](./images/task 2.png) | ![Task 2 Terminal Output](./images/task 2\(terminal\).png) |
 
 ---
 
@@ -65,7 +65,7 @@ See `task_3.py` in the repository.
 ### Evidence
 | Wiring Setup |
 |:---:|
-| ![Task 3 Wiring Setup](./images/task_3.png) |
+| ![Task 3 Wiring Setup](./images/task 3.png) |
 
 ---
 
