@@ -17,7 +17,7 @@ This IoT monitoring node uses an ESP32 with a DHT22 temperature/humidity sensor 
 3. **Get Chat ID**: Send a message to your bot, then visit `https://api.telegram.org/bot<TOKEN>/getUpdates` and copy your `chat_id`
 
 ## 📊 Flowchart
-![Flowchart](Lab_1/images/flowchart.png)
+![Flowchart](images/flowchart.png)
 
 ---
 
