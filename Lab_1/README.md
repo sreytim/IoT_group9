@@ -37,7 +37,7 @@ See `task_1.py` in the repository.
 
 ### Evidence
 
-| Wiring Setup |
+
 |:---:|
 | ![Task 1 Wiring Setup](images/task1.png) |
 
@@ -55,7 +55,7 @@ See `task_2.py` in the repository.
 
 ### Evidence
 
-| Wiring Setup | Terminal Output |
+
 |:---:|:---:|
 | ![Task 2 Wiring Setup](images/task2.jpg) | ![Task 2 Terminal Output](images/task2(terminal).jpg) |
 
@@ -76,7 +76,7 @@ See `task_3.py` in the repository.
 
 ### Evidence
 
-| Wiring Setup |
+
 |:---:|
 | ![Task 3 Wiring Setup](images/task3.jpg) |
 
@@ -120,10 +120,8 @@ The demonstration shows:
 ```bash
 # Clone the repository
 git clone https://github.com/sreytim/IoT_group9.git
-cd IoT_group9/lab1
+cd IoT_group9/lab_1
 
-# Install dependencies (if using standard Python)
-pip install -r requirements.txt
 ```
 
 ### Hardware Setup
@@ -153,12 +151,12 @@ pip install -r requirements.txt
 ## 📁 Project Structure
 
 ```
-Lab 1/
+lab_1/
 ├── images/
 │   ├── flowchart.png
 │   ├── task1.png
 │   ├── task2.jpg
-│   ├── task2(ter...).jpg
+│   ├── task2(terminal).jpg
 │   └── task3.jpg
 ├── task_1.py
 ├── task_2.py
