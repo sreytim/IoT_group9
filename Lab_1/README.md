@@ -32,7 +32,7 @@ See `task_1.py` in the repository.
 ### Evidence
 | Wiring Setup |
 |:---:|
-| ![Task 1 Wiring Setup](Lab_1\images\task 1) |
+| ![Task 1 Wiring Setup](images\task 1) |
 
 ---
 
