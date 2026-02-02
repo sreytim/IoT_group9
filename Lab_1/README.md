@@ -17,7 +17,7 @@ This IoT monitoring node uses an ESP32 with a DHT22 temperature/humidity sensor 
 3. **Get Chat ID**: Send a message to your bot, then visit `https://api.telegram.org/bot<TOKEN>/getUpdates` and copy your `chat_id`
 
 ## 📊 Flowchart
-![Flowchart](lab 1/images/flowchart.png)
+![Flowchart](lab_1/images/flowchart.png)
 
 ---
 
@@ -32,7 +32,7 @@ See `task_1.py` in the repository.
 ### Evidence
 | Wiring Setup |
 |:---:|
-| ![Task 1 Wiring Setup](./images/task_1) |
+| ![Task 1 Wiring Setup](Lab_1\images\task 1) |
 
 ---
 
@@ -47,7 +47,7 @@ See `task_2.py` in the repository.
 ### Evidence
 | Wiring Setup | Terminal Output |
 |:---:|:---:|
-| ![Task 2 Wiring Setup](./images/task_2) | ![Task 2 Terminal Output](./images/task_2\(terminal\)) |
+| ![Task 2 Wiring Setup](Lab_1\images\task 2) | ![Task 2 Terminal Output](Lab_1\images\task 2(terminal)) |
 
 ---
 
@@ -65,7 +65,7 @@ See `task_3.py` in the repository.
 ### Evidence
 | Wiring Setup |
 |:---:|
-| ![Task 3 Wiring Setup](./images/task_3) |
+| ![Task 3 Wiring Setup](Lab_1\images\task 3) |
 
 ---
 
