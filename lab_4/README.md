@@ -4,9 +4,7 @@
 
 [![Lab 4 Demo](https://img.youtube.com/vi/aJQIW_j-Ras/0.jpg)](https://youtu.be/aJQIW_j-Ras)
 
-> Click the thumbnail above to watch the full demo (60–90 seconds).
-
----
+> Click the thumbnail above to watch the full demo.
 
 ## Overview
 
@@ -42,13 +40,13 @@ This project implements a real-time multi-sensor IoT monitoring system using an 
 | DS3231 (RTC timestamp) | I2C | SDA → D21, SCL → D22, VCC → 5V |
 | MQ-5 (gas / LPG sensor) | Analog (ADC) | A0 → D33, VCC → 3.3V |
 
-> ⚠️ **Note:** BMP280 uses 3.3V. MLX90614 and DS3231 use 5V. Do **not** power BMP280 at 5V — it will burn the sensor.
+> ⚠️ **Note:** BMP280 uses 3.3V. MLX90614 and DS3231 use 5V. Do **not** power BMP280 at 5V, it will burn the sensor.
 
 ---
 
 ## Features & Edge Processing Logic
 
-### Task 1 — Gas Filtering (Moving Average)
+### Task 1: Gas Filtering (Moving Average)
 
 The MQ-5 analog sensor produces noisy ADC readings (12-bit, 0–4095). A sliding window smooths the signal before use.
 
@@ -73,7 +71,7 @@ def moving_average(val):
 
 ---
 
-### Task 2 — Gas Risk Classification
+### Task 2: Gas Risk Classification
 
 Averaged gas readings are classified into three risk levels:
 
@@ -101,7 +99,7 @@ The numeric code (`gas_risk`) is included in the MQTT payload for Grafana thresh
 
 ---
 
-### Task 3 — Fever Detection Logic
+### Task 3: Fever Detection Logic
 
 The MLX90614 measures non-contact object (body) temperature. A fever flag is derived:
 
@@ -123,7 +121,7 @@ def fever_detect(body_temp):
 
 ---
 
-### Task 4 — Full Integration & Grafana Visualization
+### Task 4: Full Integration & Grafana Visualization
 
 All processed fields are packed into a JSON payload and published every **5 seconds** via MQTT.
 
@@ -201,23 +199,6 @@ The dashboard uses InfluxDB as its data source with the following panels:
 
 ---
 
-## Project File Structure
-
-```
-lab_4/
-├── main.py            # Main MicroPython program for ESP32
-├── flows.json         # Node-RED flow export
-├── images/
-│   ├── grafana.png    # Grafana dashboard screenshot
-│   ├── influxdb.png   # InfluxDB data screenshot
-│   ├── task1.png      # Task 1 evidence (serial monitor)
-│   ├── task2.png      # Task 2 evidence (risk classification)
-│   └── task3.png      # Task 3 evidence (fever detection)
-└── README.md          # This file
-```
-
----
-
 ## How to Run
 
 ### 1. Upload Libraries to ESP32
@@ -262,20 +243,8 @@ Open **Grafana** (default: `http://localhost:3000`) and navigate to the Lab 4 da
 
 ---
 
-## Dependencies
-
-| Component | Version / Notes |
-|---|---|
-| MicroPython | v1.20+ recommended |
-| Thonny IDE | For flashing and running code |
-| Node-RED | With `node-red-contrib-influxdb` v0.7.0 |
-| InfluxDB | v1.x (database: `lab4_dbsq`) |
-| Grafana | Any recent version |
-| HiveMQ Broker | Public broker, no auth required |
-
----
 
 ## Authors
 
-**AUPP IoT Lab — Lab 4 Submission**  
-American University of Phnom Penh
+**Group 9 - Spring 2026**  
+LAB 4 - Multi-Sensor IoT Monitoring with Grafana Dashboard
