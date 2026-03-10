@@ -94,8 +94,14 @@ WIFI_PASS = 'your_wifi_password'
 - Requires WiFi connection for Blynk communication
 
 **Evidence**: 
-- Screenshot 1: [No Detection](images/not_detected.jpg)
-- Screenshot 2: [Object Detected](images/detected.jpg)
+
+**No Detection:**
+
+![No Detection](images/not_detected.jpg)
+
+**Object Detected:**
+
+![Object Detected](images/detected.jpg)
 
 ---
 
