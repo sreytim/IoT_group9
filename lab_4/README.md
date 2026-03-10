@@ -1,11 +1,5 @@
 # LAB 4: Multi-Sensor IoT Monitoring with Grafana Dashboard
 
-## 🎬 Demo Video
-
-[![Lab 4 Demo](https://img.youtube.com/vi/aJQIW_j-Ras/0.jpg)](https://youtu.be/aJQIW_j-Ras)
-
-> Click the thumbnail above to watch the full demo.
-
 ## Overview
 
 This project implements a real-time multi-sensor IoT monitoring system using an **ESP32** microcontroller and **MicroPython**. The system integrates four hardware modules to collect environmental and health-related data, applies edge processing logic, and streams the results through an MQTT broker to a full data pipeline ending in a **Grafana** dashboard.
@@ -196,6 +190,14 @@ The dashboard uses InfluxDB as its data source with the following panels:
 **InfluxDB Data Screenshot:**
 
 ![InfluxDB Data](images/influxdb.png)
+
+---
+
+## 🎬 Demo Video
+
+[![Lab 4 Demo](https://img.youtube.com/vi/aJQIW_j-Ras/0.jpg)](https://youtu.be/aJQIW_j-Ras)
+
+> Click the thumbnail above to watch the full demo.
 
 ---
 
