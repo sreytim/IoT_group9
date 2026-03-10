@@ -1,0 +1,157 @@
+[
+    {
+        "id": "8830d60d8f498011",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "150ac6dc48d2d94e",
+        "type": "json",
+        "z": "8830d60d8f498011",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 370,
+        "y": 220,
+        "wires": [
+            [
+                "ac862637fa68d422"
+            ]
+        ]
+    },
+    {
+        "id": "64aaf4e190407d25",
+        "type": "influxdb out",
+        "z": "8830d60d8f498011",
+        "influxdb": "1ee28816e7abf081",
+        "name": "Lab4",
+        "measurement": "environment_task4",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 730,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "ac862637fa68d422",
+        "type": "function",
+        "z": "8830d60d8f498011",
+        "name": "Splitter",
+        "func": "var data = JSON.parse(msg.payload);\nmsg.measurement = \"environment_task4\";\nmsg.payload = [{\n    display_time: data.time_str, // This goes to your Grafana Stat panel\n    gas_raw: data.gas_raw,\n    pressure: data.pressure,\n    altitude: data.altitude,\n    gas_risk: data.gas_risk,\n    body_temp: data.body_temp\n    },\n    {\n        // Metadata (Tags) - good for filtering in Grafana\n        device_id: \"ESP32_AUPP\",\n        location: \"Lab_Room_1\"\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 220,
+        "wires": [
+            [
+                "64aaf4e190407d25"
+            ]
+        ]
+    },
+    {
+        "id": "01fea4ab85f4be23",
+        "type": "mqtt in",
+        "z": "8830d60d8f498011",
+        "name": "",
+        "topic": "/aupp/esp32/environment",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "38ca8f09448d5d20",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 220,
+        "wires": [
+            [
+                "150ac6dc48d2d94e",
+                "ce0e8479727a98bb"
+            ]
+        ]
+    },
+    {
+        "id": "ce0e8479727a98bb",
+        "type": "debug",
+        "z": "8830d60d8f498011",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "1ee28816e7abf081",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": 8086,
+        "protocol": "http",
+        "database": "lab4_dbsq",
+        "name": "task4",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "timeout": 10,
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "38ca8f09448d5d20",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "f1876284e12ff13b",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-contrib-influxdb": "0.7.0"
+        }
+    }
+]
