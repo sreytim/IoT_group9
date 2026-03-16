@@ -1,4 +1,4 @@
-# 🅿️ Smart IoT Parking Management System
+# Smart IoT Parking Management System
 
 > Built on ESP32 with MicroPython | Telegram + Web Dashboard + Blynk
 
@@ -20,7 +20,7 @@
 
 ## 1. Introduction
 
-The **Smart IoT Parking Management System (SIPMS)** is a fully integrated embedded system designed to automate and monitor a parking facility in real time. Built on an ESP32 microcontroller running MicroPython, the system combines multiple sensors, actuators, and three IoT platforms to provide a seamless parking management experience accessible from any device.
+The **Smart IoT Parking Management System** is a fully integrated embedded system designed to automate and monitor a parking facility in real time. Built on an ESP32 microcontroller running MicroPython, the system combines multiple sensors, actuators, and three IoT platforms to provide a seamless parking management experience accessible from any device.
 
 The system addresses common urban parking challenges: wasted time searching for spaces, lack of remote visibility, manual gate operation, and poor environmental monitoring. By integrating ultrasonic sensing, IR occupancy detection, servo-controlled gate automation, and cloud connectivity, this project demonstrates a practical end-to-end IoT solution.
 
@@ -47,6 +47,8 @@ The system operates on three layers:
 
 ## 2. Hardware Description
 
+![Hardware Components](images/hardware_components.png)
+
 | Component | Pin(s) | Function |
 |---|---|---|
 | **ESP32 (MicroPython)** | — | Main microcontroller. Runs all async tasks, hosts web server, manages WiFi. |
@@ -70,7 +72,7 @@ The system operates on three layers:
 
 ## 3. System Architecture
 
-### 3.1 Architecture Overview
+![System Architecture](images/system_architect.png)
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -87,7 +89,7 @@ The system operates on three layers:
 │  │ LCD I2C      │◀──│                  │   │ /led_off       │   │
 │  │ Built-in LED │◀──│                  │   │ /led_auto      │   │
 │  └──────────────┘   └──────────────────┘   └───────┬────────┘   │
-└────────────────────────────────────────────────────┼──────────┘
+└────────────────────────────────────────────────────┼────────────┘
                                                      │ HTTP
                               ┌──────────────────────┼──────────────┐
                               │        bridge.py (Laptop)           │
@@ -101,15 +103,20 @@ The system operates on three layers:
                                   Telegram API       Blynk Cloud
 ```
 
+### 3.1 System Logic
+
+![System Logic](images/system_logic.png)
+
 ### 3.2 Async Task Structure
 
-| Task | Period | Responsibility |
-|---|---|---|
-| `task_sensors()` | 250 ms | Read IR, ultrasonic, DHT11. Update LED in AUTO mode. Update LCD. |
-| `task_gate_automation()` | 150 ms | Count near/far distance events. Auto-open and auto-close gate. |
-| `task_tm1637_display()` | 1500 ms | Show available slot count on 7-segment display. |
-| `wifi_manager()` | 6000 ms | Maintain WiFi connection. Reconnect if disconnected. |
-| `web_server()` | 3000 ms | Start HTTP server once WiFi is ready. Serve dashboard and handle API. |
+| Task | Responsibility |
+|---|---|
+| `task_sensors()` | Read IR, ultrasonic, DHT11. Update LED in AUTO mode. Update LCD. |
+| `task_gate_automation()` | Count near/far distance events. Auto-open and auto-close gate. |
+| `task_tm1637_display()` | Show available slot count on 7-segment display. |
+| `wifi_manager()` | Maintain WiFi connection. Reconnect if disconnected. |
+| `web_server()` | Start HTTP server once WiFi is ready. Serve dashboard and handle API. |
+
 
 ### 3.3 State Dictionary
 
@@ -406,4 +413,7 @@ The project encountered and resolved several practical embedded systems challeng
 
 ---
 
-*Smart IoT Parking Management System — Group Project Report*
+## Author
+
+**[Group 9 - Spring 2026]**  
+Mini Project: Smart IoT Parking Management System
