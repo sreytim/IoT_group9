@@ -413,6 +413,14 @@ The project encountered and resolved several practical embedded systems challeng
 
 ---
 
+## 🎥 Project Demo
+
+Watch the full demo here:
+
+[![Watch the demo](https://img.youtube.com/vi/BTbyjwtEnwg/0.jpg)](https://youtu.be/BTbyjwtEnwg?si=g0v24q6vbgVLf48L)
+
+---
+
 ## Author
 
 **[Group 9 - Spring 2026]**  
