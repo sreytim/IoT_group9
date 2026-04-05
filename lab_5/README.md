@@ -56,7 +56,7 @@ print(f"R: {r}  G: {g}  B: {b}  Clear: {c}")
 
 **Evidence — Serial Monitor (RGB Output):**
 
-task1.png
+![Task 1 - RGB Reading](images/task1.png)
 
 ---
 
@@ -86,7 +86,7 @@ The classified label is used by all downstream tasks (NeoPixel, motor, app).
 
 **Evidence — Color Classification States:**
 
-task2.png
+![Task 2 - Color Classification](images/task2.png)
 
 ---
 
@@ -118,7 +118,7 @@ def set_neopixel(color):
 
 **Evidence — NeoPixel Color Change Demonstration:**
 
-task3.png
+![Task 3 - NeoPixel Control](images/task3.png)
 
 ---
 
@@ -149,7 +149,7 @@ def set_motor_speed(color):
 
 **Evidence — Motor Speed Variation:**
 
-[text](https://youtu.be/IYlxtvFBA2Y)
+[task 4 - Motro Control](https://youtu.be/IYlxtvFBA2Y)
 
 ---
 
@@ -192,7 +192,7 @@ def handle_command(cmd):
 
 **Evidence — MIT App Screenshot:**
 
-MIT_app.jpg
+![MIT App Screenshot](images/MIT_app.jpg)
 
 ---
 
