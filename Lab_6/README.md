@@ -110,14 +110,6 @@ Lab_6/
 - `network` — Wi-Fi connection (built-in)
 - `utime` / `ntptime` — Datetime generation (built-in)
 
-## Academic Integrity
 
-All code in this submission is my own original work. No code was shared with or copied from other students.
-
-## Author
-
-- Name: [Your Name]
-- Student ID: [Your Student ID]
-- Major: [Your Major]
 - Course: Embedded Systems / IoT Lab
 - Lab: Lab 6 — Smart RFID System
