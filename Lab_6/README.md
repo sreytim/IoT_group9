@@ -40,7 +40,7 @@ This project implements a smart RFID-based attendance system using ESP32 and Mic
 
 ## System Flowchart
 
-![Flowchart](Image/flowchart.png)
+![Flowchart](Images/flowchart.png)
 
 ## Features
 
@@ -75,7 +75,7 @@ A1B2C3D4,John Doe,20240001,Computer Engineering,2025-04-21 10:35:22
 
 ```
 Lab_6/
-├── Image/
+├── Images/
 │   ├── flowchart.png
 │   └── Firestorescreenshot.png
 ├── main.py
@@ -89,7 +89,7 @@ Lab_6/
 
 **Firestore Screenshot:**
 
-![Firestore](Image/Firestorescreenshot.png)
+![Firestore](Images/Firestorescreenshot.png)
 
 **CSV Output:** [attendance.csv](attendance.csv)
 
