@@ -40,7 +40,7 @@ This project implements a smart RFID-based attendance system using ESP32 and Mic
 
 ## System Flowchart
 
-See `flowchart.png` for the full system flowchart diagram.
+![Flowchart](Image/flowchart.png)
 
 ## Features
 
@@ -74,22 +74,24 @@ A1B2C3D4,John Doe,20240001,Computer Engineering,2025-04-21 10:35:22
 ## Project Files
 
 ```
-lab6-rfid/
-├── main.py              # Main MicroPython script
-├── attendance.csv       # Sample/exported SD card log
-├── flowchart.png        # System flowchart diagram
-├── firestore.png        # Screenshot of Firestore records
-├── demo_video.mp4       # Demo video (60–90 seconds)
-└── README.md            # This file
+Lab_6/
+├── Image/
+│   ├── flowchart.png
+│   └── Firestorescreenshot.png
+├── main.py
+├── attendance.csv
+└── README.md
 ```
 
 ## Demo
 
-**Demo Video:** [https://youtu.be/oW7tQBvJMew?si=ddYKFr-1_OG-4Ej2]
+**Demo Video:** [Watch here](https://youtu.be/oW7tQBvJMew?si=ddYKFr-1_OG-4Ej2)
 
-**Firestore Screenshot:** Firestorescreenshot.png 
+**Firestore Screenshot:**
 
-**CSV Output:** attendance.csv
+![Firestore](Image/Firestorescreenshot.png)
+
+**CSV Output:** [attendance.csv](attendance.csv)
 
 ## How to Run
 
@@ -108,3 +110,14 @@ lab6-rfid/
 - `network` — Wi-Fi connection (built-in)
 - `utime` / `ntptime` — Datetime generation (built-in)
 
+## Academic Integrity
+
+All code in this submission is my own original work. No code was shared with or copied from other students.
+
+## Author
+
+- Name: [Your Name]
+- Student ID: [Your Student ID]
+- Major: [Your Major]
+- Course: Embedded Systems / IoT Lab
+- Lab: Lab 6 — Smart RFID System
