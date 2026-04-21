@@ -87,7 +87,7 @@ lab6-rfid/
 
 **Demo Video:** [https://youtu.be/oW7tQBvJMew?si=ddYKFr-1_OG-4Ej2]
 
-**Firestore Screenshot:** Firestorescreenshot.png
+**Firestore Screenshot:** Firestorescreenshot.png 
 
 **CSV Output:** attendance.csv
 
