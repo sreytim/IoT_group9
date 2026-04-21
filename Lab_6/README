@@ -1,0 +1,110 @@
+# LAB 6: Smart RFID System with Cloud & SD Logging
+
+## Overview
+
+This project implements a smart RFID-based attendance system using ESP32 and MicroPython (Thonny). The system integrates an RFID-RC522 reader, SD card for local storage, Google Firestore for cloud logging, and a buzzer for real-time feedback. When a registered card is scanned, the system identifies the student, logs their attendance, and provides audio confirmation.
+
+## Hardware Components
+
+- ESP32 — Main microcontroller
+- RFID-RC522 — Card reader (SPI interface)
+- MicroSD Card Module — Local CSV data logging
+- Buzzer — Audio feedback
+
+## Wiring / Pin Configuration
+
+### RFID-RC522 to ESP32
+
+- 3.3V → 3.3V (do not use 5V)
+- GND → GND
+- RST → D22
+- MISO → D19
+- MOSI → D23
+- SCK → D18
+- SDA (CS) → D16
+
+### SD Card Module to ESP32
+
+- CS → D13
+- SCK → D14
+- MOSI → D15
+- MISO → D2
+- VCC → 5V
+- GND → GND
+
+### Buzzer to ESP32
+
+- – (negative) → GND
+- + (positive) → 5V
+- S (signal) → D4
+
+## System Flowchart
+
+See `flowchart.png` for the full system flowchart diagram.
+
+## Features
+
+- Reads UID from RFID card via SPI
+- Matches UID against a predefined student database
+- Generates current datetime in `YYYY-MM-DD HH:MM:SS` format
+- Valid card: buzzer beeps for 0.3 seconds, logs data to SD card and Firestore
+- Invalid card: buzzer beeps for 3 seconds, displays "Unknown Card" — no data saved
+
+## Data Format
+
+### CSV (SD Card) — `attendance.csv`
+
+```
+UID,Name,StudentID,Major,DateTime
+A1B2C3D4,John Doe,20240001,Computer Engineering,2025-04-21 10:35:22
+```
+
+### Firestore Document Structure
+
+```json
+{
+  "uid": "A1B2C3D4",
+  "name": "John Doe",
+  "student_id": "20240001",
+  "major": "Computer Engineering",
+  "datetime": "2025-04-21 10:35:22"
+}
+```
+
+## Project Files
+
+```
+lab6-rfid/
+├── main.py              # Main MicroPython script
+├── attendance.csv       # Sample/exported SD card log
+├── flowchart.png        # System flowchart diagram
+├── firestore.png        # Screenshot of Firestore records
+├── demo_video.mp4       # Demo video (60–90 seconds)
+└── README.md            # This file
+```
+
+## Demo
+
+**Demo Video:** [https://youtu.be/oW7tQBvJMew?si=ddYKFr-1_OG-4Ej2]
+
+**Firestore Screenshot:** Firestorescreenshot.png
+
+**CSV Output:** attendance.csv
+
+## How to Run
+
+1. Flash MicroPython firmware onto the ESP32.
+2. Open Thonny IDE and connect to the ESP32 via serial port.
+3. Upload `main.py` to the ESP32.
+4. Ensure the SD card is formatted as FAT32 and inserted.
+5. Configure your Wi-Fi credentials and Firestore API key in `main.py`.
+6. Run `main.py` — the system will start scanning for RFID cards.
+
+## Dependencies / Libraries
+
+- `mfrc522` — MicroPython RFID-RC522 driver
+- `sdcard` — MicroPython SD card driver
+- `urequests` — HTTP requests for Firestore REST API
+- `network` — Wi-Fi connection (built-in)
+- `utime` / `ntptime` — Datetime generation (built-in)
+
